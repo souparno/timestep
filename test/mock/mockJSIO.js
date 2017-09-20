@@ -19,7 +19,7 @@ var done = false;
 
 function scanAddons() {
   var path = require('path');
-  var libPath = path.join(__dirname, "../../../../addons");
+  var libPath = path.join(__dirname, "../../addons");
 
   files = fs.readdirSync(libPath);
 
@@ -48,14 +48,15 @@ exports.setup = function() {
   }
 
   var path = require('path');
-  var sdkPath = path.join(__dirname, '../../../../sdk');
-
-  global.jsio = require(path.join(sdkPath, 'jsio'));
+  //var sdkPath = path.join(__dirname, '../../../../sdk');
+  global.jsio = require("jsio");
   jsio.__env.name = 'browser';
 
-  jsio.path.add(sdkPath);
+  //jsio.path.add(sdkPath);
   // jsio.path.add(path.join(libPath, './gc-api/api'));
-  jsio.path.add(path.join(sdkPath, 'timestep'));
+  //jsio.path.add(path.join(sdkPath, 'timestep'));
+  jsio.path.add(path.join(__dirname, "../../src"));
+  jsio.path.add(path.join(__dirname, "../../node_modules/jsio/packages"));
 
   var paths = scanAddons();
   var i = paths.length;

@@ -1,15 +1,20 @@
 {
-	"name": "timestep",
-	"author": "Game Closure",
-	"version": "0.0.1",
-	"private": true,
-	"repository": {
-		"type": "git",
-		"url": "http://github.com/gameclosure/timestep/timestep.git"
-	},
-	"devkit": {
-		"clientPaths": {
-			"*": "src/"
-		}
-	}
+  "name": "timestep",
+  "author": "Game Closure",
+  "version": "0.0.1",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/gameclosure/timestep/timestep.git"
+  },
+  "devkit": {
+    "clientPaths": {
+      "*": "src/"
+    }
+  },
+  "devDependencies": {
+    "jsdom": "^0.11.1",
+    "jsio": "github:souparno/js.io",
+    "mocha": "^3.5.3"
+  }
 }
